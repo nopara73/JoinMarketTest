@@ -50,9 +50,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)PostBuildEventFiles\JoinMarket" "$(TargetDir)JoinMarket" /Y/E/I/D
-xcopy "$(ProjectDir)PostBuildEventFiles\Python27" "$(TargetDir)Python27" /Y/E/I/D
-xcopy "$(ProjectDir)PostBuildEventFiles\libsodium.dll" "$(TargetDir)JoinMarket" /Y/E/I/D</PostBuildEvent>
+    <PostBuildEvent>echo d | xcopy "$(ProjectDir)PostBuildEventFiles\JoinMarket" "$(TargetDir)JoinMarket" /Y/E/I/D
+echo d |xcopy "$(ProjectDir)PostBuildEventFiles\Python27" "$(TargetDir)Python27" /Y/E/I/D
+echo d |xcopy "$(ProjectDir)PostBuildEventFiles\libsodium.dll" "$(TargetDir)JoinMarket" /Y/E/I/D</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
