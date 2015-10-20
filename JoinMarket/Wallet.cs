@@ -7,7 +7,7 @@ namespace JoinMarketTest.JoinMarket
 {
     internal class Wallet
     {
-        private static readonly string WalletToolPath = Path.Combine(Environment.CurrentDirectory, @"JoinMarket/wallet-tool.py");
+        private static readonly string WalletToolPath = Path.Combine(Environment.CurrentDirectory, @"wallet-tool.py");
 
         /// <summary>
         /// Generates a wallet.json without password.
@@ -19,7 +19,7 @@ namespace JoinMarketTest.JoinMarket
             options["Arguments"] = new[] { "method", "generate" };
 
             var pythonEngine = Python.CreateEngine(options);
-
+            
             var pythonScript = pythonEngine.CreateScriptSourceFromFile(WalletToolPath);
 
             pythonScript.Execute();
