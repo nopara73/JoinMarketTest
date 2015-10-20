@@ -16,10 +16,13 @@ namespace JoinMarketTest.JoinMarket
         internal string Generate()
         {
             IDictionary<string, object> options = new Dictionary<string, object>();
-            options["Arguments"] = new[] { "0", "generate" };
-            var engine = Python.CreateEngine(options);
+            options["Arguments"] = new[] { "method", "generate" };
 
-            engine.ExecuteFile(WalletToolPath);
+            var pythonEngine = Python.CreateEngine(options);
+
+            var pythonScript = pythonEngine.CreateScriptSourceFromFile(WalletToolPath);
+
+            pythonScript.Execute();
 
             return "";
         }
