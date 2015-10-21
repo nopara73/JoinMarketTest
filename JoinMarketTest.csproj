@@ -599,8 +599,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>echo d | xcopy "$(ProjectDir)Lib" "$(TargetDir)Lib" /Y/E/I/D
-echo d | xcopy "$(ProjectDir)PostBuildEventFiles\JoinMarket" "$(TargetDir)" /Y/E/I/D
+    <PostBuildEvent>echo d | xcopy "$(ProjectDir)Lib" "$(TargetDir)StdLib" /Y/E/I/D
+echo d | xcopy "$(ProjectDir)PostBuildEventFiles\JoinMarketForHiddenWallet" "$(TargetDir)" /Y/E/I/D
 echo d | xcopy "$(ProjectDir)PostBuildEventFiles\libsodium.dll" "$(TargetDir)" /Y/E/I/D</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

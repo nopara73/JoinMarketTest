@@ -1,0 +1,5 @@
+*.pyc
+*.swp
+blockchain.cache
+env
+joinmarket.cfg
